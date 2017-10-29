@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Hey Stranger Member Profile</title>
+      <!-- Global stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/core.css" rel="stylesheet" type="text/css">
+      <link href="css/components.css" rel="stylesheet" type="text/css">
+      <link href="css/colors.css" rel="stylesheet" type="text/css">
+      <!-- /global stylesheets -->
+      <!-- Core JS files -->
+      <script type="text/javascript" src="js/pace.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/blockui.min.js"></script>
+      <!-- /core JS files -->
+      <!-- Theme JS files -->
+      <script type="text/javascript" src="js/select2.min.js"></script>
+      <script type="text/javascript" src="js/uniform.min.js"></script>
+      <script type="text/javascript" src="js/moment.min.js"></script>
+      <script type="text/javascript" src="js/fullcalendar.min.js"></script>
+      <script type="text/javascript" src="js/echarts.js"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="js/user_pages_profile.js"></script>
+      <!-- /theme JS files -->
+   </head>
+   <body>
+      <!-- Main navbar -->
+      <div class="navbar navbar-inverse">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="images/logo_light.png" alt=""></a>
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+               <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+               <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+         </div>
+         <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav">
+               <li>
+                  <a class="sidebar-control sidebar-main-toggle hidden-xs">
+                  <i class="icon-paragraph-justify3"></i>
+                  </a>
+               </li>
+               <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="icon-git-compare"></i>
+                  <span class="visible-xs-inline-block position-right">Git updates</span>
+                  <span class="badge bg-warning-400">9</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-content">
+                     <div class="dropdown-content-heading">
+                        Notifications
+                        <ul class="icons-list">
+                           <li><a href="#"><i class="icon-sync"></i></a></li>
+                        </ul>
+                     </div>
+                     <ul class="media-list dropdown-content-body width-350">
+                        <li class="media">
+                           <div class="media-left">
+                              <a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
+                           </div>
+                           <div class="media-body">
+                              Your hotel Booked
+                              <div class="media-annotation">4 minutes ago</div>
+                           </div>
+                        </li>
+                       
+                       
+                     </ul>
+                     <div class="dropdown-content-footer">
+                        <a href="#" data-popup="tooltip" title="All Notifications"><i class="icon-menu display-block"></i></a>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+               
+               <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="icon-bubbles4"></i>
+                  <span class="visible-xs-inline-block position-right">Admin Notifications</span>
+                  <span class="badge bg-warning-400">2</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-content width-350">
+                     <div class="dropdown-content-heading">
+                        Admin Notifications
+                        <ul class="icons-list">
+                           <li><a href="#"><i class="icon-compose"></i></a></li>
+                        </ul>
+                     </div>
+                     <ul class="media-list dropdown-content-body">
+                        <li class="media">
+                           <div class="media-left">
+                              <img src="images/face10.jpg" class="img-circle img-sm" alt="">
+                              <span class="badge bg-danger-400 media-badge">5</span>
+                           </div>
+                           <div class="media-body">
+                              <a href="#" class="media-heading">
+                              <span class="text-semibold">James Alexander</span>
+                              <span class="media-annotation pull-right">04:58</span>
+                              </a>
+                              <span class="text-muted">who knows, maybe that would be the best thing for me...</span>
+                           </div>
+                        </li>
+                       
+                     </ul>
+                     <div class="dropdown-content-footer">
+                        <a href="#" data-popup="tooltip" title="All Notifications"><i class="icon-menu display-block"></i></a>
+                     </div>
+                  </div>
+               </li>
+               <li class="dropdown dropdown-user">
+                  <a class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="images/face11.jpg" alt="">
+                  <span>User Name</span>
+                  <i class="caret"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                     <li><a href="member-profile.html"><i class="icon-user-plus"></i> My profile</a></li>
+                     <li><a href="my-accommodation.html"><i class="icon-coins"></i> My Accommodation</a></li>
+                     <li><a href="hotel-booked.html"><span class="badge badge-warning pull-right">58</span> <i class="icon-comment-discussion"></i> Hotel Booked</a></li>
+                     <li class="divider"></li>
+                     <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                     <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- /main navbar -->
+      <!-- Page container -->
+      <div class="page-container">
+         <!-- Page content -->
+         <div class="page-content">
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-main">
+               <div class="sidebar-content">
+                  <!-- User menu -->
+                  <div class="sidebar-user">
+                     <div class="category-content">
+                        <div class="media">
+                           <a href="#" class="media-left"><img src="images/face11.jpg" class="img-circle img-sm" alt=""></a>
+                           <div class="media-body">
+                              <span class="media-heading text-semibold">User Name</span>
+                              <div class="text-size-mini text-muted">
+                                 <i class="icon-pin text-size-small"></i> &nbsp;South Africa
+                              </div>
+                           </div>
+                           <div class="media-right media-middle">
+                              <ul class="icons-list">
+                                 <li>
+                                    <a href="#"><i class="icon-cog3"></i></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /user menu -->
+                  <!-- Main navigation -->
+                  <div class="sidebar-category sidebar-category-visible">
+                     <div class="category-content no-padding">
+                        <ul class="navigation navigation-main navigation-accordion">
+                           <!-- Main -->
+                           <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+                           <li><a href="index.html"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+                           <li>
+                              <a href="#"><i class="icon-stack2"></i> <span>My Accommodation</span></a>
+                              <ul>
+                                 <li><a href="my-accommodation.html">My Accommodation</a></li>
+                                 <li><a href="add-accommodation.html">Add Accommodation</a></li>
+                                 <li><a href="add-room.html">Add Room</a></li>
+                                 
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#"><i class="icon-copy"></i> <span>My Setting</span></a>
+                              <ul>
+                                 <li><a href="member-profile.html" id="layout1">My Profile <span class="label bg-warning-400">Current</span></a></li>
+                                 <li><a href="member-profile.html" id="layout2">Edit Profile</a></li>
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#"><i class="icon-droplet2"></i> <span>My Booking</span></a>
+                              <ul>
+                                 <li><a href="my-booking.html">View Booking</a></li>
+                                 <li><a href="booking-invoice.html">View Invoice</a></li>
+                                 <li><a href="my-bookmark.html">My Bookmark</a></li>
+                                
+                              </ul>
+                           </li>
+                           <li>
+                              <a href="#"><i class="icon-stack"></i> <span>Banner</span></a>
+                              <ul>
+                                 <li><a href="my-banner.html">View Banner</a></li>
+                                 <li><a href="add-banner.html">Add Banner</a></li>
+                              </ul>
+                           </li>
+                           <li><a href="support.html"><i class="icon-list-unordered"></i> <span>Support <span class="label bg-blue-400">24X7</span></span></a></li>
+                           
+                           <!-- /main -->
+                        
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- /main navigation -->
+               </div>
+            </div>
+            <!-- /main sidebar -->
+            <!-- Main content -->
+            <div class="content-wrapper">
+               <!-- Page header -->
+               <div class="page-header no-margin">
+                  <div class="page-header-content">
+                     <div class="page-title">
+                        <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Member Backoffice</span> - Member Profile</h4>
+                     </div>
+                     <div class="heading-elements">
+                        <div class="heading-btn-group">
+                           <a href="#" class="btn btn-link btn-float has-text"><i class="icon-bars-alt text-primary"></i><span>Statistics</span></a>
+                           <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calculator text-primary"></i> <span>Invoices</span></a>
+                           <a href="#" class="btn btn-link btn-float has-text"><i class="icon-calendar5 text-primary"></i> <span>Schedule</span></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="breadcrumb-line">
+                     <ul class="breadcrumb">
+                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
+                        <li><a href="user_pages_profile_cover.html">User pages</a></li>
+                        <li class="active">Member Profile</li>
+                     </ul>
+                     <ul class="breadcrumb-elements">
+                        <li><a href="#"><i class="icon-comment-discussion position-left"></i> Support</a></li>
+                        <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="icon-gear position-left"></i>
+                           Settings
+                           <span class="caret"></span>
+                           </a>
+                           <ul class="dropdown-menu dropdown-menu-right">
+                              <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+                              <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+                              <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <!-- /page header -->
+               <!-- Cover area -->
+               <div class="profile-cover">
+                  <div class="profile-cover-img" style="background-image: url(images/cover2.jpg)"></div>
+                  <div class="media">
+                     <div class="media-left">
+                        <a href="#" class="profile-thumb">
+                        <img src="images/face11.jpg" class="img-circle" alt="">
+                        </a>
+                     </div>
+                     <div class="media-body">
+                        <h1>Hanna Dorman <small class="display-block">UX/UI designer</small></h1>
+                     </div>
+                     <div class="media-right media-middle">
+                        <ul class="list-inline list-inline-condensed no-margin-bottom text-nowrap">
+                           <li><a href="#" class="btn btn-default"><i class="icon-file-picture position-left"></i> Cover image</a></li>
+                           <li><a href="#" class="btn btn-default"><i class="icon-file-stats position-left"></i> Statistics</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- /cover area -->
+               <!-- Toolbar -->
+               <div class="navbar navbar-default navbar-xs content-group">
+                  <ul class="nav navbar-nav visible-xs-block">
+                     <li class="full-width text-center"><a data-toggle="collapse" data-target="#navbar-filter"><i class="icon-menu7"></i></a></li>
+                  </ul>
+                  <div class="navbar-collapse collapse" id="navbar-filter">
+                     <ul class="nav navbar-nav element-active-slate-400">
+                        <li class="active"><a href="#activity" data-toggle="tab"><i class="icon-menu7 position-left"></i> Activity</a></li>
+                       
+                        <li><a href="#settings" data-toggle="tab"><i class="icon-cog3 position-left"></i> Settings</a></li>
+                     </ul>
+                     <div class="navbar-right">
+                        <ul class="nav navbar-nav">
+                           <li><a href="#"><i class="icon-stack-text position-left"></i> Notes</a></li>
+                           <li><a href="#"><i class="icon-collaboration position-left"></i> Friends</a></li>
+                           <li><a href="#"><i class="icon-images3 position-left"></i> Photos</a></li>
+                           <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-gear"></i> <span class="visible-xs-inline-block position-right"> Options</span> <span class="caret"></span></a>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                 <li><a href="#"><i class="icon-image2"></i> Update cover</a></li>
+                                 <li><a href="#"><i class="icon-clippy"></i> Update info</a></li>
+                                 <li><a href="#"><i class="icon-make-group"></i> Manage sections</a></li>
+                                 <li class="divider"></li>
+                                 <li><a href="#"><i class="icon-three-bars"></i> Activity log</a></li>
+                                 <li><a href="#"><i class="icon-cog5"></i> Profile settings</a></li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <!-- /toolbar -->
+               <!-- Content area -->
+               <div class="content">
+                  <!-- User profile -->
+                  <div class="row">
+                     <div class="col-lg-9">
+                        <div class="tabbable">
+                           <div class="tab-content">
+                              <div class="tab-pane fade in active" id="activity">
+                                 <!-- Timeline -->
+                                 <div class="timeline timeline-left content-group">
+                                    <div class="timeline-container">
+                                      
+                                      
+                                     
+                                       <!-- Invoices -->
+                                       <div class="timeline-row">
+                                          <div class="timeline-icon">
+                                             <div class="bg-warning-400">
+                                                <i class="icon-cash3"></i>
+                                             </div>
+                                          </div>
+                                          <div class="row">
+                                             <div class="col-lg-6">
+                                                <div class="panel border-left-lg border-left-danger invoice-grid timeline-content">
+                                                   <div class="panel-body">
+                                                      <div class="row">
+                                                         <div class="col-sm-6">
+                                                            <h6 class="text-semibold no-margin-top">Total Booking</h6>
+                                                            <ul class="list list-unstyled">
+                                                               <li>Invoice #: &nbsp;0028</li>
+                                                               <li>Issued on: <span class="text-semibold">2015/01/25</span></li>
+                                                            </ul>
+                                                         </div>
+                                                         <div class="col-sm-6">
+                                                            <h6 class="text-semibold text-right no-margin-top">$8,750</h6>
+                                                            <ul class="list list-unstyled text-right">
+                                                               <li>Method: <span class="text-semibold">Paypal</span></li>
+                                                               <li class="dropdown">
+                                                                  Status: &nbsp;
+                                                                  <a href="#" class="label bg-danger-400 dropdown-toggle" data-toggle="dropdown">Overdue <span class="caret"></span></a>
+                                                                  <ul class="dropdown-menu dropdown-menu-right">
+                                                                     <li class="active"><a href="#"><i class="icon-alert"></i> Overdue</a></li>
+                                                                     <li><a href="#"><i class="icon-alarm"></i> Pending</a></li>
+                                                                     <li><a href="#"><i class="icon-checkmark3"></i> Paid</a></li>
+                                                                     <li class="divider"></li>
+                                                                     <li><a href="#"><i class="icon-spinner2 spinner"></i> On hold</a></li>
+                                                                     <li><a href="#"><i class="icon-cross2"></i> Canceled</a></li>
+                                                                  </ul>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="panel-footer">
+                                                      <ul>
+                                                         <li><span class="status-mark border-danger position-left"></span> Due: <span class="text-semibold">2015/02/25</span></li>
+                                                      </ul>
+                                                      <ul class="pull-right">
+                                                         <li><a href="#" data-toggle="modal" data-target="#invoice"><i class="icon-eye8"></i></a></li>
+                                                         <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu7"></i> <span class="caret"></span></a>
+                                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                               <li><a href="#"><i class="icon-printer"></i> Print invoice</a></li>
+                                                               <li><a href="#"><i class="icon-file-download"></i> Download invoice</a></li>
+                                                               <li class="divider"></li>
+                                                               <li><a href="#"><i class="icon-file-plus"></i> Edit invoice</a></li>
+                                                               <li><a href="#"><i class="icon-cross2"></i> Remove invoice</a></li>
+                                                            </ul>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-6">
+                                                <div class="panel border-left-lg border-left-success invoice-grid timeline-content">
+                                                   <div class="panel-body">
+                                                      <div class="row">
+                                                         <div class="col-sm-6">
+                                                            <h6 class="text-semibold no-margin-top">Rebecca Manes</h6>
+                                                            <ul class="list list-unstyled">
+                                                               <li>Invoice #: &nbsp;0027</li>
+                                                               <li>Issued on: <span class="text-semibold">2015/02/24</span></li>
+                                                            </ul>
+                                                         </div>
+                                                         <div class="col-sm-6">
+                                                            <h6 class="text-semibold text-right no-margin-top">$5,100</h6>
+                                                            <ul class="list list-unstyled text-right">
+                                                               <li>Method: <span class="text-semibold">Paypal</span></li>
+                                                               <li class="dropdown">
+                                                                  Status: &nbsp;
+                                                                  <a href="#" class="label bg-success-400 dropdown-toggle" data-toggle="dropdown">Paid <span class="caret"></span></a>
+                                                                  <ul class="dropdown-menu dropdown-menu-right">
+                                                                     <li><a href="#"><i class="icon-alert"></i> Overdue</a></li>
+                                                                     <li><a href="#"><i class="icon-alarm"></i> Pending</a></li>
+                                                                     <li class="active"><a href="#"><i class="icon-checkmark3"></i> Paid</a></li>
+                                                                     <li class="divider"></li>
+                                                                     <li><a href="#"><i class="icon-spinner2 spinner"></i> On hold</a></li>
+                                                                     <li><a href="#"><i class="icon-cross2"></i> Canceled</a></li>
+                                                                  </ul>
+                                                               </li>
+                                                            </ul>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="panel-footer">
+                                                      <ul>
+                                                         <li><span class="status-mark border-success position-left"></span> Due: <span class="text-semibold">2015/03/24</span></li>
+                                                      </ul>
+                                                      <ul class="pull-right">
+                                                         <li><a href="#" data-toggle="modal" data-target="#invoice"><i class="icon-eye8"></i></a></li>
+                                                         <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu7"></i> <span class="caret"></span></a>
+                                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                               <li><a href="#"><i class="icon-printer"></i> Print invoice</a></li>
+                                                               <li><a href="#"><i class="icon-file-download"></i> Download invoice</a></li>
+                                                               <li class="divider"></li>
+                                                               <li><a href="#"><i class="icon-file-plus"></i> Edit invoice</a></li>
+                                                               <li><a href="#"><i class="icon-cross2"></i> Remove invoice</a></li>
+                                                            </ul>
+                                                         </li>
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <!-- /invoices -->
+                                      
+                                    </div>
+                                 </div>
+                                 <!-- /timeline -->
+                              </div>
+                              
+                              <div class="tab-pane fade" id="settings">
+                                 <!-- Profile info -->
+                                 <div class="panel panel-flat">
+                                    <div class="panel-heading">
+                                       <h6 class="panel-title">Profile information</h6>
+                                       <div class="heading-elements">
+                                          <ul class="icons-list">
+                                             <li><a data-action="collapse"></a></li>
+                                             <li><a data-action="reload"></a></li>
+                                             <li><a data-action="close"></a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div class="panel-body">
+                                       <form action="#">
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                   <label>First Name</label>
+                                                   <input type="text" value="" placeholder="Enter Your First Name" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <label>Last Name</label>
+                                                   <input type="text" placeholder="Enter Your Last Name" value="Last Name" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-4">
+                                                   <label>Business Number #</label>
+                                                   <input type="text" value="+99-99-9999-9999" class="form-control">
+                                                  
+                                                </div>
+                                                <div class="col-md-4">
+                                                   <label>Reservation Number #</label>
+                                                   <input type="text" value="+99-99-9999-9999" class="form-control">
+                                                   
+                                                </div>
+                                                <div class="col-md-4">
+                                                   <label>Alternate Number #</label>
+                                                   <input type="text" value="+99-99-9999-9999" class="form-control">
+                                                   
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-4">
+                                                   <label>Reservation Email Id</label>
+                                                   <input type="text" value="eugene@kopyov.com" class="form-control">
+                                                  
+                                                </div>
+                                                <div class="col-md-4">
+                                                   <label>Alternate Email Id</label>
+                                                   <input type="text"  value="eugene@kopyov.com" class="form-control">
+                                                   
+                                                </div>
+                                                <div class="col-md-4">
+                                                   <label>Website</label>
+                                                   <input type="text" placeholder="Enter url here" class="form-control">
+                                                   
+                                                </div>
+                                             </div>
+                                          </div>
+                                          
+                                           <div class="form-group">
+                                             <div class="row">
+                                                
+                                                <div class="col-md-6">
+                                                   <label>Memberships</label>
+                                                   <select class="select">
+                                                      <option value="germany" selected="selected">Memberships</option>
+                                                      <option value="france">TGCSA</option>
+                                                      <option value="spain">GHASA</option>
+                                                      <option value="netherlands">SATSA</option>
+                                                      <option value="other">AA Travel</option>
+                                                      <option value="uk">Portfolio</option>
+                                                      <option value="uk">NAA</option>
+                                                      <option value="uk">Cape Town Tourism</option>
+                                                      <option value="uk">TGCSA</option>
+                                                      <option value="uk">None</option>
+                                                      <option value="uk">Other</option>
+                                                   </select>
+                                                </div>
+                                               <div class="col-md-6">
+                                                   <label>Payment methods</label>
+                                                   <select class="select">
+                                                      <option value="germany" selected="selected">Payment methods</option>
+                                                      <option value="france">Cash Only</option>
+                                                      <option value="spain">Visa / Master Card</option>
+                                                      <option value="netherlands">Debit Cards</option>
+                                                      <option value="other">EFT</option>
+                                                      <option value="uk">Paypal</option>
+                                                    
+                                                      <option value="uk">Other</option>
+                                                   </select>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                
+                                                <div class="col-md-6">
+                                                   <label>Your country</label>
+                                                   <select class="select">
+                                                      <option value="germany" selected="selected">Germany</option>
+                                                      <option value="france">France</option>
+                                                      <option value="spain">Spain</option>
+                                                      <option value="netherlands">Netherlands</option>
+                                                      <option value="other">...</option>
+                                                      <option value="uk">United Kingdom</option>
+                                                   </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <label>Street Address</label>
+                                                   <input type="text"  value="Street Address" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-4">
+                                                   <label>City</label>
+                                                   <input type="text" value="Munich" class="form-control">
+                                                </div>
+                                                <div class="col-md-4">
+                                                   <label>Suburb/Area</label>
+                                                   <input type="text" value="Bayern" class="form-control">
+                                                </div>
+                                                <div class="col-md-4">
+                                                   <label>Province</label>
+                                                   <input type="text" value="1031" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                   <label>Latitude</label>
+                                                   <input type="text" placeholder="latitude" class="form-control">
+                                                </div>
+                                               <div class="col-md-6">
+                                                   <label>Longitude</label>
+                                                   <input type="text" placeholder="Longitude" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                               
+                                                <div class="col-md-6">
+                                                   <label>Upload profile image</label>
+                                                   <input type="file" class="file-styled">
+                                                   <span class="help-block">Accepted formats: gif, png, jpg. Max file size 2Mb</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="text-right">
+                                             <button type="submit" class="btn btn-primary">Save <i class="icon-arrow-right14 position-right"></i></button>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                                 <!-- /profile info -->
+                                 <!-- Account settings -->
+                                 <div class="panel panel-flat">
+                                    <div class="panel-heading">
+                                       <h6 class="panel-title">Bank Detail</h6>
+                                       <div class="heading-elements">
+                                          <ul class="icons-list">
+                                             <li><a data-action="collapse"></a></li>
+                                             <li><a data-action="reload"></a></li>
+                                             <li><a data-action="close"></a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div class="panel-body">
+                                       <form action="#">
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                   <label>Bank Name</label>
+                                                   <input type="text" placeholder="Bank Name" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <label>Branch Name</label>
+                                                   <input type="text" placeholder="Branch Name" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                           <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                   <label>Account Holder Name</label>
+                                                   <input type="text" placeholder="Account Holder Name" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <label>Account Number</label>
+                                                   <input type="text" placeholder="Account Number" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                   <label>Branch Code</label>
+                                                   <input type="text" placeholder="Branch code" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <label>Paypal Account Detail</label>
+                                                   <input type="text" placeholder="Paypal Email Id" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                         
+                                         
+                                          <div class="text-right">
+                                             <button type="submit" class="btn btn-primary">Save </button>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                                 <!-- /account settings -->
+                                  <!-- Password settings -->
+                                 <div class="panel panel-flat">
+                                    <div class="panel-heading">
+                                       <h6 class="panel-title">Reset Password</h6>
+                                       <div class="heading-elements">
+                                          <ul class="icons-list">
+                                             <li><a data-action="collapse"></a></li>
+                                             <li><a data-action="reload"></a></li>
+                                             <li><a data-action="close"></a></li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div class="panel-body">
+                                       <form action="#">
+                                          <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                   <label>User Name</label>
+                                                   <input type="text" placeholder="User Name" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <label>Current Password</label>
+                                                   <input type="password" placeholder="Current Password" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                           <div class="form-group">
+                                             <div class="row">
+                                                <div class="col-md-6">
+                                                   <label>New Password</label>
+                                                   <input type="password" placeholder="New Password" class="form-control">
+                                                </div>
+                                                <div class="col-md-6">
+                                                   <label>Confirm Password</label>
+                                                   <input type="password" placeholder="Confirm Password" class="form-control">
+                                                </div>
+                                             </div>
+                                          </div>
+                                         
+                                         
+                                         
+                                          <div class="text-right">
+                                             <button type="submit" class="btn btn-primary">Update </button>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                                 <!-- /account settings -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3">
+                        <!-- Navigation -->
+                        <div class="panel panel-flat">
+                           <div class="panel-heading">
+                              <h6 class="panel-title">Navigation</h6>
+                              <div class="heading-elements">
+                                 <a href="#" class="heading-text">See all &rarr;</a>
+                              </div>
+                           </div>
+                           <div class="list-group list-group-borderless no-padding-top">
+                              <a href="#" class="list-group-item"><i class="icon-user"></i> My profile</a>
+                              <a href="#" class="list-group-item"><i class="icon-cash3"></i> Balance</a>
+                              <a href="#" class="list-group-item"><i class="icon-tree7"></i> Connections <span class="badge bg-danger pull-right">29</span></a>
+                              <a href="#" class="list-group-item"><i class="icon-users"></i> Friends</a>
+                              <div class="list-group-divider"></div>
+                              <a href="#" class="list-group-item"><i class="icon-calendar3"></i> Events <span class="badge bg-teal-400 pull-right">48</span></a>
+                              <a href="#" class="list-group-item"><i class="icon-cog3"></i> Account settings</a>
+                           </div>
+                        </div>
+                        <!-- /navigation -->
+                        <!-- Share your thoughts -->
+                        <div class="panel panel-flat">
+                           <div class="panel-heading">
+                              <h6 class="panel-title">Share your thoughts</h6>
+                              <div class="heading-elements">
+                                 <ul class="icons-list">
+                                    <li><a data-action="close"></a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="panel-body">
+                              <form action="#">
+                                 <div class="form-group">
+                                    <textarea name="enter-message" class="form-control mb-15" rows="3" cols="1" placeholder="What's on your mind?"></textarea>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-sm-6">
+                                       <ul class="icons-list icons-list-extended mt-10">
+                                          <li><a href="#" data-popup="tooltip" title="Add photo" data-container="body"><i class="icon-images2"></i></a></li>
+                                          <li><a href="#" data-popup="tooltip" title="Add video" data-container="body"><i class="icon-film2"></i></a></li>
+                                          <li><a href="#" data-popup="tooltip" title="Add event" data-container="body"><i class="icon-calendar2"></i></a></li>
+                                       </ul>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                       <button type="button" class="btn btn-primary btn-labeled btn-labeled-right">Share <b><i class="icon-circle-right2"></i></b></button>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                        <!-- /share your thoughts -->
+                        <!-- Balance chart -->
+                        
+                        <!-- /balance chart -->
+                        <!-- Connections -->
+                        
+                        <!-- /connections -->
+                     </div>
+                  </div>
+                  <!-- /user profile -->
+                  <!-- Footer -->
+                  <div class="footer text-muted">
+                     &copy; 2017. Hey Stranger All right reserved
+                  </div>
+                  <!-- /footer -->
+               </div>
+               <!-- /content area -->
+            </div>
+            <!-- /main content -->
+         </div>
+         <!-- /page content -->
+      </div>
+      <!-- /page container -->
+   </body>
+</html>
