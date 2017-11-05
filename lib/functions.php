@@ -157,16 +157,11 @@ function getAccomodationListing() {
     };
     $start_from = ($page - 1) * $limit;
 
-
     $sql = "SELECT COUNT(id) FROM accommodation_detail";
     $rs_result = mysql_query($sql);
     $row = mysql_fetch_row($rs_result);
     $total_records = $row[0];
     $total_pages = ceil($total_records / $limit);
-
-
-
-
 
     $qr = mysql_query("select * from accommodation_detail LIMIT $start_from, $limit") or die(mysql_error());
     $alldata = [];
