@@ -138,6 +138,23 @@ function dd($data, $flag = false) {
 }
 
 /**
+ * get_error
+ * @param
+ * @return error
+ * @since 0.1
+ * @author Sandeep Kumar
+ */
+function errorEnableAndDisable($flag = false) {
+    if (isset($flag) && !empty($flag)) {
+        error_reporting(0);
+    } else {
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+    }
+}
+
+/**
  * getAccomodationListing
  * @param
  * @return array
@@ -154,8 +171,6 @@ function getAccomodationListing() {
         $page = 1;
     };
     $start_from = ($page - 1) * $limit;
-
-
     $sql = "SELECT COUNT(id) FROM accommodation_detail";
     $rs_result = mysql_query($sql);
     $row = mysql_fetch_row($rs_result);
@@ -184,10 +199,8 @@ function getAccomodationListing() {
 function getAccomodationPrice($id) {
 
     $qr = mysql_query("select price from room_data where acco_id='" . $id . "'") or die(mysql_error());
-
     $row = mysql_fetch_object($qr);
-    $price = $row->price;
-    $data = (!empty($price) && isset($price) ? $price : '');
+    $data = (!empty($row) && is_object($row) ? $row->price : '');
     return $data;
 }
 
