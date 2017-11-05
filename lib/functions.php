@@ -117,8 +117,6 @@ include('config.php');
 
   $mxDb->file_validation($filepath)
   \=============================================================================================/
-
-
  */
 
 /**
@@ -163,10 +161,6 @@ function getAccomodationListing() {
     $row = mysql_fetch_row($rs_result);
     $total_records = $row[0];
     $total_pages = ceil($total_records / $limit);
-
-
-
-
 
     $qr = mysql_query("select * from accommodation_detail LIMIT $start_from, $limit") or die(mysql_error());
     $alldata = [];
