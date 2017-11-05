@@ -1,3 +1,4 @@
+<?php errorEnableAndDisable(); ?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head>

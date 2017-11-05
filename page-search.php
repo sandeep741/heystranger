@@ -1,6 +1,7 @@
+<?php require_once('lib/functions.php'); ?>
 <?php require_once('head.php'); ?>
 <?php require_once('header.php'); ?>
-<?php require_once('lib/functions.php'); ?>
+<?php $acco = getAccomodationListing(); ?>
 <div class="global-wrap container-fluid">
     <div class="row">
         <div class="full-page-absolute" style="position: fixed;
@@ -401,7 +402,6 @@
             </form>
         </div>
         <div class="container mb20">
-            <?php $acco = getAccomodationListing(); ?>
             <div class="vc_row wpb_row st bg-holder vc_custom_1419417667101">
                 <div class='container '>
                     <div class='row'>
@@ -468,7 +468,7 @@
                                             <div class="col-md-4">
                                                 <div class="thumb">
                                                     <header class="thumb-header">
-                                                        <a class="hover-img" href="hotel-detail.php?id=<?php echo $accod->id; ?>">
+                                                        <a class="hover-img" href="hotel-detail.php?id=<?php echo base64_encode($accod->id); ?>">
                                                             <img width="360" height="270" src="<?php echo $file_path; ?>" class="attachment-360x270 size-360x270 wp-post-image" alt="" srcset="<?php echo $file_path; ?>" sizes="(max-width: 360px) 100vw, 360px" />
                                                             <h5 class="hover-title-center"><?php echo $accod->accomod_name; ?></h5>
                                                         </a>
@@ -505,7 +505,7 @@
                                                 </div>
                                             </div>
 
-                                        <?php
+                                            <?php
                                         }
                                     }
                                     ?>
