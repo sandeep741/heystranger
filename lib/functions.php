@@ -190,6 +190,28 @@ function getAccomodationListing() {
 }
 
 /**
+ * getAccomodationListing
+ * @param
+ * @return array
+ * @since 0.1
+ * @author Sandeep Kumar
+ */
+function getAccomodationById($id) {
+    global $mxDb;
+
+    $qr = mysql_query("select * from accommodation_detail LIMIT $id") or die(mysql_error());
+    $alldata = [];
+    while ($row = mysql_fetch_object($qr)) {
+        $alldata[] = $row;
+    }
+    $data1 = [];
+    $data = (!empty($alldata) && is_array($alldata) ? $alldata : '');
+    $data1['record'] = $data;
+    $data1['total'] = $total_pages;
+    return $data1;
+}
+
+/**
  * getAccomodationPrice
  * @param
  * @return string

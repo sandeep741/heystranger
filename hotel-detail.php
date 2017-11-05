@@ -1,7 +1,14 @@
+<?Php 
+
+///////////////////////savidky yadavdvadl;kdsjf;lsadlkf; /////////////
+
+?>
+
+
 <?php require_once('lib/functions.php'); ?>
 <?php require_once('head.php'); ?>
 <?php require_once('header.php'); ?>
-<?php $acco = getAccomodationListing(); ?>
+<?php $acco = getAccomodationListing($id); ?>
 
       <div class="global-wrap container-fluid">
       <div class="row">
