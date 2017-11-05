@@ -148,7 +148,7 @@ function dd($data, $flag = false) {
  */
 function getAccomodationListing() {
     global $mxDb;
-    
+
     $limit = 9;
     if (isset($_GET["page"])) {
         $page = $_GET["page"];
@@ -156,21 +156,21 @@ function getAccomodationListing() {
         $page = 1;
     };
     $start_from = ($page - 1) * $limit;
-    
-    
-    $sql = "SELECT COUNT(id) FROM accommodation_detail";  
-$rs_result = mysql_query($sql);  
-$row = mysql_fetch_row($rs_result);  
-$total_records = $row[0];  
-$total_pages = ceil($total_records / $limit);  
 
-    
-    
+
+    $sql = "SELECT COUNT(id) FROM accommodation_detail";
+    $rs_result = mysql_query($sql);
+    $row = mysql_fetch_row($rs_result);
+    $total_records = $row[0];
+    $total_pages = ceil($total_records / $limit);
+
+
+
 
 
     $qr = mysql_query("select * from accommodation_detail LIMIT $start_from, $limit") or die(mysql_error());
     $alldata = [];
-    while($row = mysql_fetch_object($qr)){
+    while ($row = mysql_fetch_object($qr)) {
         $alldata[] = $row;
     }
     $data1 = [];
@@ -187,17 +187,14 @@ $total_pages = ceil($total_records / $limit);
  * @since 0.1
  * @author Sandeep Kumar
  */
-function getAccomodationPrice($id){
-    
-        $qr = mysql_query("select price from room_data where acco_id='".$id."'") or die(mysql_error());
-    
+function getAccomodationPrice($id) {
+
+    $qr = mysql_query("select price from room_data where acco_id='" . $id . "'") or die(mysql_error());
+
     $row = mysql_fetch_object($qr);
-     $price =  $row->price;
+    $price = $row->price;
     $data = (!empty($price) && isset($price) ? $price : '');
     return $data;
-    
-    
-    
 }
 
 ?>
