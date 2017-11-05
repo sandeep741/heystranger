@@ -199,17 +199,10 @@ function getAccomodationListing() {
  */
 function getAccomodationById($id) {
     global $mxDb;
-
-    $qr = mysql_query("select * from accommodation_detail LIMIT $id") or die(mysql_error());
-    $alldata = [];
-    while ($row = mysql_fetch_object($qr)) {
-        $alldata[] = $row;
-    }
-    $data1 = [];
-    $data = (!empty($alldata) && is_array($alldata) ? $alldata : '');
-    $data1['record'] = $data;
-    $data1['total'] = $total_pages;
-    return $data1;
+    $qr = mysql_query("select * from accommodation_detail where id = $id") or die(mysql_error());
+    $row = mysql_fetch_object($qr);
+    $data = (!empty($row) && is_object($row) ? $row : '');
+    return $data;
 }
 
 /**

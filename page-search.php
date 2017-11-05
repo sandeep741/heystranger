@@ -456,7 +456,6 @@
                                         foreach ($acco['record'] as $accod) {
                                             $path = "partner-backoffice/img-accomo/" . $accod->acc_img1;
 
-
                                             if (file_exists($path) && isset($accod->acc_img1) && !empty($accod->acc_img1)) {
                                                 $file_path = $path;
                                             } else {
