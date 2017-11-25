@@ -1,7 +1,4 @@
 <?php
-
-include('config.php');
-
 // global class objects with method explaination
 /*
   $mxSecurity global variable you can use for security like cookies not store of admin account
@@ -217,6 +214,32 @@ function getAccomodationPrice($id) {
     $row = mysql_fetch_object($qr);
     $data = (!empty($row) && is_object($row) ? $row->price : '');
     return $data;
+}
+
+/**
+ * get_client_ip
+ * @param
+ * @return ip address
+ * @since 0.1
+ * @author Sandeep Kumar
+ */
+function get_client_ip() {
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if (getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if (getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if (getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if (getenv('HTTP_FORWARDED'))
+        $ipaddress = getenv('HTTP_FORWARDED');
+    else if (getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'UNKNOWN';
+    return $ipaddress;
 }
 
 ?>
