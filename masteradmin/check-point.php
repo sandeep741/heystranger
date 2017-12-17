@@ -4,7 +4,8 @@ define('ABSPATH','../lib/');
 
 
 // include main file
-include(ABSPATH.'functions.php'); 
+//include(ABSPATH.'functions.php'); 
+include("../lib/config.php");
 // check point for login user and logout user
 if( isset($_POST['username']) && isset($_POST['password']) && isset($_POST['action']) && isset($_POST['token']) ){
 	
@@ -16,7 +17,7 @@ if( isset($_POST['username']) && isset($_POST['password']) && isset($_POST['acti
 			$username = mysql_real_escape_string($_POST['username']);
 			$password = mysql_real_escape_string($_POST['password']);
 			
-$password1= hash("sha256",$password);
+                        $password1= hash("sha256",$password);
 //echo $username; print_r("<br/>");echo $password;print_r("<br/>");echo $password1;exit();
 			$condition = " where username ='".$username."' and password ='".$password1."'";
 			$args_user = $mxDb->get_information('admin', '*', $condition,true, 'assoc');
